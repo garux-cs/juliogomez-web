@@ -35,3 +35,39 @@ body {
 .links a:hover {
   text-decoration: underline;
 }
+:root {
+  --bg: #f4f6f8;
+  --text: #333;
+  --card-bg: #ffffff;
+  --link: #0072b1;
+  --shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background .25s ease, color .25s ease;
+}
+
+.container {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: background .25s ease, box-shadow .25s ease, color .25s ease;
+}
+
+.tema-btn {
+  margin-top: 1rem;
+  background: transparent;
+  color: inherit;
+  border: 2px solid rgba(0,0,0,0.06);
+}
+
+.links a { color: var(--link); }
+
+html.oscuro {
+  --bg: #0f1113;
+  --text: #e6e6e6;
+  --card-bg: #16181a;
+  --link: #7fb4ff;
+  --shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
