@@ -56,10 +56,22 @@ html, body {
 }
 
 .tema-btn {
-  margin-top: 1rem;
-  background: transparent;
-  color: inherit;
-  border: 2px solid rgba(0,0,0,0.06);
+  position: fixed;       
+  top: 1rem;             
+  right: 1rem;          
+  background: #0072b1;   
+  color: #fff;           
+  border: none;          
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;         
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.tema-btn:hover {
+  background: #005a87;
 }
 
 .links a { color: var(--link); }
