@@ -1,40 +1,17 @@
+
+
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f6f8;
-  color: #333;
+  background: var(--bg);
+  color: var(--text);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  transition: background .25s ease, color .25s ease;
 }
 
-.container {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  max-width: 400px;
-}
-
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.links a {
-  margin: 0 10px;
-  color: #0072b1;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
 :root {
   --bg: #f4f6f8;
   --text: #333;
@@ -43,43 +20,108 @@ body {
   --shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-html, body {
-  background: var(--bg);
-  color: var(--text);
-  transition: background .25s ease, color .25s ease;
-}
-
-.container {
-  background: var(--card-bg);
-  box-shadow: var(--shadow);
-  transition: background .25s ease, box-shadow .25s ease, color .25s ease;
-}
-
-.tema-btn {
-  position: fixed;       
-  top: 1rem;             
-  right: 1rem;          
-  background: #0072b1;   
-  color: #fff;           
-  border: none;          
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 1000;         
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.tema-btn:hover {
-  background: #005a87;
-}
-
-.links a { color: var(--link); }
-
 html.oscuro {
   --bg: #0f1113;
   --text: #e6e6e6;
   --card-bg: #16181a;
   --link: #7fb4ff;
   --shadow: 0 6px 30px rgba(0,0,0,0.6);
+}
+
+
+
+.container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  max-width: 400px;
+  transition: background .25s ease, box-shadow .25s ease;
+}
+
+
+.avatar {
+  width: 140px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+
+h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin: 8px 0;
+  background: rgba(0,0,0,0.06);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: transform .2s ease, background .2s ease;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  background: rgba(0,0,0,0.1);
+}
+
+.profesores {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+
+
+.links a {
+  margin: 0 10px;
+  color: var(--link);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+.tema-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #0072b1;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  z-index: 1000;
+  transition: background .3s;
+}
+
+.tema-btn:hover {
+  background: #005a87;
 }
